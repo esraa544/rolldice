@@ -1,6 +1,6 @@
 'use strict';
 
-dice
+// dice
 let activePlayer = 0;
 let dice = Math.trunc((Math.random()*6)+1);
 let current = 0;
