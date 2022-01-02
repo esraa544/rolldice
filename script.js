@@ -26,3 +26,28 @@ document.querySelector('.roll').addEventListener('click', function() {
        }
 })
 
+
+document.querySelector('.hold').addEventListener('click', function() {
+   if (dice === 1) {
+       
+       current = 0;
+       document.querySelector('.current').textContent = current ;
+       }else{
+           playerscore = playerscore + current;
+           current = 0;
+           document.querySelector('.current').textContent = current ;
+           document.querySelector('.score').textContent = playerscore ;
+           document.querySelector('.active').classList.toggle('.hidden');
+           document.querySelector('.active').classList.toggle('.hidden');            
+       };
+})
+
+document.querySelector('.newGame').addEventListener('click', function(){
+   document.querySelector('.image').style.visibility='hidden';  
+   dice = Math.trunc((Math.random()*6)+1);
+   current = 0;
+   playerscore = 0;
+   document.querySelector('.current').textContent = current ;
+   document.querySelector('.score').textContent = playerscore ;
+   document.querySelector('.image').src =``; 
+})
